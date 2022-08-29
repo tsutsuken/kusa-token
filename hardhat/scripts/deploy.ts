@@ -15,6 +15,11 @@ async function main() {
   console.log(
     `Lock with ${lockedAmount} ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
   );
+
+  const KusaToken = await ethers.getContractFactory("KusaToken");
+  const kusaToken = await KusaToken.deploy();
+  await kusaToken.deployed();
+  console.log(`KusaToken deployed to ${kusaToken.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
