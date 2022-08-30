@@ -8,7 +8,7 @@ dotenv.config();
 /**
  * Set your target network!!!
  */
-const TARGET_NETWORK = "localhost";
+const TARGET_NETWORK = "mumbai";
 
 const config: HardhatUserConfig = {
   solidity: "0.8.9",
