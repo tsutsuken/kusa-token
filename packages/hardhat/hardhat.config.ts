@@ -15,6 +15,10 @@ const config: HardhatUserConfig = {
   defaultNetwork: TARGET_NETWORK,
   networks: {
     localhost: {},
+    polygon: {
+      url: `https://polygon-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY_POLYGON}`,
+      accounts: [`${process.env.DEPLOYER_PRIVATE_KEY}`],
+    },
     mumbai: {
       url: `https://polygon-mumbai.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY_MUMBAI}`,
       accounts: [`${process.env.DEPLOYER_PRIVATE_KEY}`],
