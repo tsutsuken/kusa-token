@@ -1,9 +1,18 @@
 # kusa-token
 
+## KusaToken コントラクト情報
+
+- ネットワーク
+  - Polygon
+- コントラクトのアドレス
+  - 0x488521020C3FF1CBC687D291e333cA029E671c0A
+- コントラクトのページ(polygonscan)
+  - https://polygonscan.com/address/0x488521020C3FF1CBC687D291e333cA029E671c0A
+
 ## トークン（新規・既存）の発行
 
 - コントラクトの Owner 権限を持つウォレットで、コントラクトの`mint()`メソッドを呼び出す
-  - polygonscan.com 上の KusaToken のページ > Contract > Write Contract > mint で以下の情報を入力し、実行する
+  - [polygonscan 上の KusaToken のページ](https://polygonscan.com/address/0x488521020C3FF1CBC687D291e333cA029E671c0A#writeContract) > Contract > Write Contract > mint で以下の情報を入力し、実行する
     - account: トークンを付与したいアドレス
     - id: トークンの id。新トークン発行の場合は、未使用の id を指定する
     - amount: トークンの発行数
@@ -12,7 +21,7 @@
 ## トークンの uri（トークンのメタデータの参照先 URL）の変更
 
 - コントラクトの Owner 権限を持つウォレットで、コントラクトの`setURI()`メソッドを呼び出す
-  - polygonscan.com 上の KusaToken のページ > Contract > Write Contract > setURI で以下の情報を入力し、実行する
+  - [polygonscan 上の KusaToken のページ](https://polygonscan.com/address/0x488521020C3FF1CBC687D291e333cA029E671c0A#writeContract) > Contract > Write Contract > setURI で以下の情報を入力し、実行する
     - newuri: 新しい uri。「sample.com/sample/{id}.json」 のように指定することで、`{id}`の部分に自動で tokenid が割り当てられる
 
 ## トークンのメタデータ（トークン名、トークン画像 URL など）の変更
