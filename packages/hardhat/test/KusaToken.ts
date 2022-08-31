@@ -28,5 +28,21 @@ describe("KusaToken", function () {
       const ownerBalance = await kusaToken.balanceOf(owner.address, tokenId);
       expect(await kusaToken.totalSupply(tokenId)).to.equal(ownerBalance);
     });
+
+    it("Should mint additional token", async function () {
+      const { kusaToken, owner } = await loadFixture(deployKusaToken);
+      const tokenId = 0;
+      const amount = 100000;
+      const data = "0x";
+      await kusaToken.mint(owner.address, 0, amount, data);
+
+      // Mint additional token
+      const additionalAmount = 100000;
+      await kusaToken.mint(owner.address, 0, additionalAmount, data);
+
+      const ownerBalance = await kusaToken.balanceOf(owner.address, tokenId);
+      console.log("ownerBalance: " + ownerBalance);
+      expect(amount + additionalAmount).to.equal(ownerBalance);
+    });
   });
 });
