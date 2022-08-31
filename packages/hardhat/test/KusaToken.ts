@@ -45,4 +45,14 @@ describe("KusaToken", function () {
       expect(amount + additionalAmount).to.equal(ownerBalance);
     });
   });
+
+  describe("Set uri", function () {
+    it("Should set new uri", async function () {
+      const { kusaToken } = await loadFixture(deployKusaToken);
+      const newURI = "new_uri_for_test";
+      await kusaToken.setURI(newURI);
+      const uriOfFirstToken = await kusaToken.uri(0);
+      expect(uriOfFirstToken).to.equal(newURI);
+    });
+  });
 });
