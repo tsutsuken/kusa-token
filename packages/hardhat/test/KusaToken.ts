@@ -46,6 +46,15 @@ describe("KusaToken", function () {
     });
   });
 
+  describe("Set owner", function () {
+    it("Should set new owner", async function () {
+      const { kusaToken, owner } = await loadFixture(deployKusaToken);
+      const [_, newOwner] = await ethers.getSigners();
+      await kusaToken.transferOwnership(newOwner.address);
+      expect(newOwner.address).to.equal(await kusaToken.owner());
+    });
+  });
+
   describe("Set uri", function () {
     it("Should set new uri", async function () {
       const { kusaToken } = await loadFixture(deployKusaToken);
