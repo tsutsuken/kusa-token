@@ -1,4 +1,3 @@
 {
-  "solidity.packageDefaultDependenciesDirectory": "packages/hardhat/node_modules",
-  "eslint.workingDirectories": ["packages/firebase/functions"]
+  "solidity.packageDefaultDependenciesDirectory": "packages/hardhat/node_modules"
 }
