@@ -26,7 +26,7 @@
   - package/hardhat フォルダ下で、以下のコマンドを実行する
 
     ```zsh
-      npm run test
+      npm run chain
     ```
 
 - package/hardhat フォルダ下で、以下のコマンドを実行する
