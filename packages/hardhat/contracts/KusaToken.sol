@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Supply.sol";
 
 contract KusaToken is ERC1155, Ownable, ERC1155Supply {
-    constructor() ERC1155("https://storage.googleapis.com/kusa-token.appspot.com/token_metadata/{id}.json")
+    constructor() ERC1155("https://storage.googleapis.com/kusa-token.appspot.com/token/metadata/{id}.json")
     {
     }
 
